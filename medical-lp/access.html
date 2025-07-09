@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地図・アクセス | 医療開業サポート</title>
+    <meta name="description" content="医療開業サポートへのアクセス方法。大阪市中央区谷町のオフィスへの行き方をご案内します。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .access-section {
+            padding: 80px 0;
+        }
+        
+        .access-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        
+        .map-container {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .map-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        
+        .access-info {
+            background-color: var(--light-bg);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .access-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .access-detail {
+            margin-bottom: 30px;
+        }
+        
+        .detail-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .detail-content {
+            line-height: 1.8;
+        }
+        
+        .access-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .access-table th,
+        .access-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .access-table th {
+            width: 30%;
+            font-weight: 700;
+            color: var(--primary-color);
+            background-color: rgba(0, 85, 62, 0.05);
+        }
+        
+        .transport-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .transport-item {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .transport-item::before {
+            content: '🚃';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .contact-box {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-box-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box-tel {
+            font-size: 32px;
+            color: var(--secondary-color);
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .access-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-iframe {
+                height: 300px;
+            }
+            
+            .access-info {
+                padding: 30px 20px;
+            }
+            
+            .access-table th {
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span class="header-tel">お電話でのお問い合わせ</span>
+                    <a href="tel:06-6942-3939" class="header-tel-number">06-6942-3939</a>
+                    <span class="header-hours">受付時間: 平日 9:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>医療開業サポート</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">トップ</a></li>
+                            <li class="nav-item"><a href="company.html" class="nav-link">会社紹介</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                            <li class="nav-item"><a href="access.html" class="nav-link active">地図・アクセス</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
+                            <li class="nav-item"><a href="branches.html" class="nav-link">店舗情報</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">地図・アクセス</h2>
+            <div class="breadcrumb">
+                <a href="index.html">トップ</a> &gt; 地図・アクセス
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="access-section">
+            <div class="container">
+                <div class="access-content">
+                    <!-- Map -->
+                    <div class="map-container">
+                        <iframe 
+                            class="map-iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.678877634811!2d135.51405931549906!3d34.68814168043842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e72251bc3c6b%3A0x0!2s%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E8%B0%B7%E7%94%BA3-1-11!5e0!3m2!1sja!2sjp!4v1234567890"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Access Information -->
+                    <div class="access-info">
+                        <h3 class="access-title">アクセス情報</h3>
+                        
+                        <table class="access-table">
+                            <tr>
+                                <th>所在地</th>
+                                <td>
+                                    〒540-0012<br>
+                                    大阪府大阪市中央区谷町3-1-11<br>
+                                    大晋第二ビル5F
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td>06-6942-3939</td>
+                            </tr>
+                            <tr>
+                                <th>FAX番号</th>
+                                <td>06-6942-3940</td>
+                            </tr>
+                            <tr>
+                                <th>営業時間</th>
+                                <td>平日 9:00～18:00</td>
+                            </tr>
+                            <tr>
+                                <th>定休日</th>
+                                <td>土曜日・日曜日・祝日</td>
+                            </tr>
+                        </table>
+
+                        <div class="access-detail">
+                            <span class="detail-label">最寄り駅からのアクセス</span>
+                            <ul class="transport-list">
+                                <li class="transport-item">
+                                    大阪メトロ谷町線・中央線「谷町四丁目駅」4番出口より徒歩3分
+                                </li>
+                                <li class="transport-item">
+                                    大阪メトロ堺筋線・中央線「堺筋本町駅」12番出口より徒歩7分
+                                </li>
+                                <li class="transport-item">
+                                    京阪本線「天満橋駅」より徒歩10分
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-box">
+                            <h4 class="contact-box-title">お問い合わせはこちら</h4>
+                            <a href="tel:06-6942-3939" class="contact-box-tel">06-6942-3939</a>
+                            <p>受付時間: 平日 9:00-18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">医療開業サポート</h3>
+                    <p class="footer-address">
+                        〒540-0012<br>
+                        大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                    </p>
+                    <p class="footer-tel">TEL: 06-6942-3939</p>
+                    <p class="footer-fax">FAX: 06-6942-3940</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">サイトマップ</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">トップページ</a></li>
+                        <li><a href="company.html">会社紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">地図・アクセス</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="branches.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-nav-title">関連リンク</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 医療開業サポート All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

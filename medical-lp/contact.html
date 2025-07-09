@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 医療開業サポート</title>
+    <meta name="description" content="医療開業に関するご相談・お問い合わせはこちらから。無料相談も承っております。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .contact-section {
+            padding: 80px 0;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--light-bg);
+            padding: 50px;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .required {
+            color: #ff4444;
+            margin-left: 5px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-note {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        .form-actions {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            max-width: 800px;
+            margin: 60px auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .info-box {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .info-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .info-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .info-content {
+            line-height: 1.8;
+        }
+        
+        .info-tel {
+            font-size: 28px;
+            color: var(--primary-color);
+            font-weight: 700;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span class="header-tel">お電話でのお問い合わせ</span>
+                    <a href="tel:06-6942-3939" class="header-tel-number">06-6942-3939</a>
+                    <span class="header-hours">受付時間: 平日 9:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>医療開業サポート</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">トップ</a></li>
+                            <li class="nav-item"><a href="company.html" class="nav-link">会社紹介</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link active">お問い合わせ</a></li>
+                            <li class="nav-item"><a href="access.html" class="nav-link">地図・アクセス</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
+                            <li class="nav-item"><a href="branches.html" class="nav-link">店舗情報</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">お問い合わせ</h2>
+            <div class="breadcrumb">
+                <a href="index.html">トップ</a> &gt; お問い合わせ
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-intro">
+                    <p>医療開業に関するご相談、お見積りのご依頼など、<br>
+                    お気軽にお問い合わせください。<br>
+                    初回のご相談は無料で承っております。</p>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                お名前<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                フリガナ<span class="required">*</span>
+                            </label>
+                            <input type="text" class="form-control" name="kana" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">
+                                電話番号<span class="required">*</span>
+                            </label>
+                            <input type="tel" class="form-control" name="tel" required>
+                            <p class="form-note">例：03-1234-5678</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                メールアドレス<span class="required">*</span>
+                            </label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            開業予定時期
+                        </label>
+                        <select class="form-control" name="schedule">
+                            <option value="">選択してください</option>
+                            <option value="3months">3ヶ月以内</option>
+                            <option value="6months">6ヶ月以内</option>
+                            <option value="1year">1年以内</option>
+                            <option value="over1year">1年以上先</option>
+                            <option value="undecided">未定</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            開業予定地域
+                        </label>
+                        <input type="text" class="form-control" name="area" placeholder="例：東京都世田谷区">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            診療科目
+                        </label>
+                        <input type="text" class="form-control" name="specialty" placeholder="例：内科、小児科">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            お問い合わせ内容<span class="required">*</span>
+                        </label>
+                        <textarea class="form-control" name="message" required placeholder="ご相談内容、ご質問などをご記入ください"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">送信する</button>
+                    </div>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-box">
+                        <div class="info-icon">📞</div>
+                        <h3 class="info-title">お電話でのお問い合わせ</h3>
+                        <div class="info-content">
+                            <a href="tel:06-6942-3939" class="info-tel">06-6942-3939</a>
+                            <p>受付時間: 平日 9:00-18:00</p>
+                            <p>お急ぎの方はお電話にてご連絡ください</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📧</div>
+                        <h3 class="info-title">メールでのお問い合わせ</h3>
+                        <div class="info-content">
+                            <p>24時間受付</p>
+                            <p>通常2営業日以内にご返信いたします</p>
+                            <p>お急ぎの場合はお電話をご利用ください</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">医療開業サポート</h3>
+                    <p class="footer-address">
+                        〒540-0012<br>
+                        大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                    </p>
+                    <p class="footer-tel">TEL: 06-6942-3939</p>
+                    <p class="footer-fax">FAX: 06-6942-3940</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">サイトマップ</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">トップページ</a></li>
+                        <li><a href="company.html">会社紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">地図・アクセス</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="branches.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-nav-title">関連リンク</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 医療開業サポート All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

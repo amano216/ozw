@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗情報 | 医療開業サポート</title>
+    <meta name="description" content="医療開業サポートの各拠点情報。大阪本社、東京支店、名古屋支店、福岡支店の詳細をご案内します。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .branches-section {
+            padding: 80px 0;
+        }
+        
+        .branches-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .branches-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .branches-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .branch-card {
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .branch-card:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transform: translateY(-3px);
+        }
+        
+        .branch-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 30px;
+            text-align: center;
+        }
+        
+        .branch-name {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .branch-type {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .branch-body {
+            padding: 30px;
+        }
+        
+        .branch-info {
+            margin-bottom: 20px;
+        }
+        
+        .info-label {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .info-content {
+            line-height: 1.6;
+        }
+        
+        .branch-tel {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .coverage-section {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .coverage-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .coverage-area {
+            text-align: center;
+        }
+        
+        .coverage-area-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .coverage-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .coverage-list li {
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+        
+        @media screen and (max-width: 1024px) {
+            .branches-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .coverage-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .branch-body {
+                padding: 20px;
+            }
+            
+            .coverage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span class="header-tel">お電話でのお問い合わせ</span>
+                    <a href="tel:06-6942-3939" class="header-tel-number">06-6942-3939</a>
+                    <span class="header-hours">受付時間: 平日 9:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>医療開業サポート</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">トップ</a></li>
+                            <li class="nav-item"><a href="company.html" class="nav-link">会社紹介</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                            <li class="nav-item"><a href="access.html" class="nav-link">地図・アクセス</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
+                            <li class="nav-item"><a href="branches.html" class="nav-link active">店舗情報</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">店舗情報</h2>
+            <div class="breadcrumb">
+                <a href="index.html">トップ</a> &gt; 店舗情報
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="branches-section">
+            <div class="container">
+                <div class="branches-intro">
+                    <p>全国4拠点体制で、地域に密着した<br>
+                    きめ細やかなサポートを提供しています。</p>
+                </div>
+
+                <div class="branches-grid">
+                    <!-- 大阪本社 -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <h3 class="branch-name">大阪本社</h3>
+                            <p class="branch-type">HEAD OFFICE</p>
+                        </div>
+                        <div class="branch-body">
+                            <div class="branch-info">
+                                <span class="info-label">所在地</span>
+                                <p class="info-content">
+                                    〒540-0012<br>
+                                    大阪府大阪市中央区谷町3-1-11<br>
+                                    大晋第二ビル5F
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">電話番号</span>
+                                <p class="info-content">
+                                    <a href="tel:06-6942-3939" class="branch-tel">06-6942-3939</a>
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">FAX番号</span>
+                                <p class="info-content">06-6942-3940</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">営業時間</span>
+                                <p class="info-content">平日 9:00～18:00</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">アクセス</span>
+                                <p class="info-content">
+                                    大阪メトロ「谷町四丁目駅」徒歩3分
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 東京支店 -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <h3 class="branch-name">東京支店</h3>
+                            <p class="branch-type">TOKYO BRANCH</p>
+                        </div>
+                        <div class="branch-body">
+                            <div class="branch-info">
+                                <span class="info-label">所在地</span>
+                                <p class="info-content">
+                                    〒100-0005<br>
+                                    東京都千代田区丸の内1-8-3<br>
+                                    丸の内トラストタワー本館20F
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">電話番号</span>
+                                <p class="info-content">
+                                    <a href="tel:03-6256-0000" class="branch-tel">03-6256-0000</a>
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">FAX番号</span>
+                                <p class="info-content">03-6256-0001</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">営業時間</span>
+                                <p class="info-content">平日 9:00～18:00</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">アクセス</span>
+                                <p class="info-content">
+                                    JR「東京駅」丸の内北口徒歩3分
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 名古屋支店 -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <h3 class="branch-name">名古屋支店</h3>
+                            <p class="branch-type">NAGOYA BRANCH</p>
+                        </div>
+                        <div class="branch-body">
+                            <div class="branch-info">
+                                <span class="info-label">所在地</span>
+                                <p class="info-content">
+                                    〒450-0002<br>
+                                    愛知県名古屋市中村区名駅4-7-1<br>
+                                    ミッドランドスクエア15F
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">電話番号</span>
+                                <p class="info-content">
+                                    <a href="tel:052-551-0000" class="branch-tel">052-551-0000</a>
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">FAX番号</span>
+                                <p class="info-content">052-551-0001</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">営業時間</span>
+                                <p class="info-content">平日 9:00～18:00</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">アクセス</span>
+                                <p class="info-content">
+                                    JR「名古屋駅」徒歩5分
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 福岡支店 -->
+                    <div class="branch-card">
+                        <div class="branch-header">
+                            <h3 class="branch-name">福岡支店</h3>
+                            <p class="branch-type">FUKUOKA BRANCH</p>
+                        </div>
+                        <div class="branch-body">
+                            <div class="branch-info">
+                                <span class="info-label">所在地</span>
+                                <p class="info-content">
+                                    〒810-0001<br>
+                                    福岡県福岡市中央区天神1-9-17<br>
+                                    福岡天神フコク生命ビル15F
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">電話番号</span>
+                                <p class="info-content">
+                                    <a href="tel:092-751-0000" class="branch-tel">092-751-0000</a>
+                                </p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">FAX番号</span>
+                                <p class="info-content">092-751-0001</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">営業時間</span>
+                                <p class="info-content">平日 9:00～18:00</p>
+                            </div>
+                            <div class="branch-info">
+                                <span class="info-label">アクセス</span>
+                                <p class="info-content">
+                                    地下鉄「天神駅」徒歩2分
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 対応エリア -->
+        <section class="coverage-section">
+            <div class="container">
+                <h3 class="coverage-title">対応エリア</h3>
+                <div class="coverage-grid">
+                    <div class="coverage-area">
+                        <h4 class="coverage-area-title">関西エリア</h4>
+                        <ul class="coverage-list">
+                            <li>大阪府</li>
+                            <li>京都府</li>
+                            <li>兵庫県</li>
+                            <li>奈良県</li>
+                            <li>滋賀県</li>
+                            <li>和歌山県</li>
+                        </ul>
+                    </div>
+                    <div class="coverage-area">
+                        <h4 class="coverage-area-title">関東エリア</h4>
+                        <ul class="coverage-list">
+                            <li>東京都</li>
+                            <li>神奈川県</li>
+                            <li>千葉県</li>
+                            <li>埼玉県</li>
+                            <li>茨城県</li>
+                            <li>栃木県</li>
+                            <li>群馬県</li>
+                        </ul>
+                    </div>
+                    <div class="coverage-area">
+                        <h4 class="coverage-area-title">東海エリア</h4>
+                        <ul class="coverage-list">
+                            <li>愛知県</li>
+                            <li>岐阜県</li>
+                            <li>三重県</li>
+                            <li>静岡県</li>
+                        </ul>
+                    </div>
+                    <div class="coverage-area">
+                        <h4 class="coverage-area-title">九州エリア</h4>
+                        <ul class="coverage-list">
+                            <li>福岡県</li>
+                            <li>佐賀県</li>
+                            <li>長崎県</li>
+                            <li>熊本県</li>
+                            <li>大分県</li>
+                            <li>宮崎県</li>
+                            <li>鹿児島県</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">医療開業サポート</h3>
+                    <p class="footer-address">
+                        〒540-0012<br>
+                        大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                    </p>
+                    <p class="footer-tel">TEL: 06-6942-3939</p>
+                    <p class="footer-fax">FAX: 06-6942-3940</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">サイトマップ</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">トップページ</a></li>
+                        <li><a href="company.html">会社紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">地図・アクセス</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="branches.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-nav-title">関連リンク</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 医療開業サポート All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

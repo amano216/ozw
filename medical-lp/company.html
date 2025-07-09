@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社紹介 | 医療開業サポート</title>
+    <meta name="description" content="医療開業サポートの会社紹介。私たちの理念、強み、代表メッセージをご紹介します。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .company-section {
+            padding: 80px 0;
+        }
+        
+        .company-message {
+            background-color: var(--light-bg);
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .message-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .message-content {
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+        
+        .message-signature {
+            text-align: right;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .company-philosophy {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .philosophy-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .philosophy-desc {
+            font-size: 18px;
+            line-height: 2;
+        }
+        
+        .company-strengths {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .strength-item {
+            padding: 30px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .strength-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .strength-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        @media screen and (max-width: 767px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .company-message {
+                padding: 40px 20px;
+            }
+            
+            .company-strengths {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span class="header-tel">お電話でのお問い合わせ</span>
+                    <a href="tel:06-6942-3939" class="header-tel-number">06-6942-3939</a>
+                    <span class="header-hours">受付時間: 平日 9:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>医療開業サポート</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">トップ</a></li>
+                            <li class="nav-item"><a href="company.html" class="nav-link active">会社紹介</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                            <li class="nav-item"><a href="access.html" class="nav-link">地図・アクセス</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">会社概要</a></li>
+                            <li class="nav-item"><a href="branches.html" class="nav-link">店舗情報</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">会社紹介</h2>
+            <div class="breadcrumb">
+                <a href="index.html">トップ</a> &gt; 会社紹介
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="company-section">
+            <div class="container">
+                <!-- 代表挨拶 -->
+                <div class="company-message">
+                    <h3 class="message-title">代表挨拶</h3>
+                    <div class="message-content">
+                        <p>医療開業は、医師の皆様にとって人生の大きな転換点です。長年培われた医療技術と経験を活かし、地域医療に貢献したいという志を実現する第一歩となります。</p>
+                        <p>しかし、開業には立地選定、資金調達、設備導入、スタッフ採用、各種申請手続きなど、医療以外の専門知識が必要となる場面が数多くあります。</p>
+                        <p>私たちは、これまで500件以上の開業支援実績を通じて蓄積したノウハウと、医療業界に特化した専門性を活かし、医師の皆様が本来の医療に専念できる環境づくりをサポートしています。</p>
+                        <p>開業準備から経営安定化まで、ワンストップでサポートすることで、皆様の「理想のクリニック」実現のお手伝いをさせていただきます。</p>
+                    </div>
+                    <div class="message-signature">
+                        代表取締役　山田 太郎
+                    </div>
+                </div>
+
+                <!-- 企業理念 -->
+                <div class="company-philosophy">
+                    <h3 class="philosophy-title">企業理念</h3>
+                    <p class="philosophy-desc">
+                        医師の志を形にし、地域医療の発展に貢献する<br>
+                        私たちは、医療開業支援を通じて、<br>
+                        より良い医療環境の実現を目指します
+                    </p>
+                </div>
+
+                <!-- 私たちの強み -->
+                <h3 class="section-title">私たちの強み</h3>
+                <div class="company-strengths">
+                    <div class="strength-item">
+                        <div class="strength-icon">📊</div>
+                        <h4 class="strength-title">データに基づく提案</h4>
+                        <p>診療圏調査、競合分析など、客観的なデータに基づいた開業戦略をご提案します。感覚ではなく、数字で裏付けられた確実な開業を実現します。</p>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon">🤝</div>
+                        <h4 class="strength-title">強固なネットワーク</h4>
+                        <p>金融機関、医療機器メーカー、建築会社など、開業に必要な各分野の優良企業と強固なネットワークを構築。最適な条件でのご紹介が可能です。</p>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon">💼</div>
+                        <h4 class="strength-title">豊富な実績</h4>
+                        <p>500件以上の開業支援実績から得た知見を活かし、各診療科目特有の課題にも的確に対応。成功事例を基にした実践的なアドバイスを提供します。</p>
+                    </div>
+                    <div class="strength-item">
+                        <div class="strength-icon">🔄</div>
+                        <h4 class="strength-title">継続的なサポート</h4>
+                        <p>開業後も定期的なフォローアップを実施。経営改善提案、スタッフ教育支援など、安定経営に向けた継続的なサポートを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">医療開業サポート</h3>
+                    <p class="footer-address">
+                        〒540-0012<br>
+                        大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                    </p>
+                    <p class="footer-tel">TEL: 06-6942-3939</p>
+                    <p class="footer-fax">FAX: 06-6942-3940</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">サイトマップ</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">トップページ</a></li>
+                        <li><a href="company.html">会社紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">地図・アクセス</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="branches.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-nav-title">関連リンク</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 医療開業サポート All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

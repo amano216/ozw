@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 医療開業サポート</title>
+    <meta name="description" content="医療開業サポートの会社概要。設立情報、資本金、代表者、事業内容などをご紹介します。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary-color);
+        }
+        
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-table-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--light-bg);
+            padding: 50px;
+            border-radius: 10px;
+        }
+        
+        .about-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .about-table tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .about-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .about-table th,
+        .about-table td {
+            padding: 20px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .about-table th {
+            width: 30%;
+            font-weight: 700;
+            color: var(--primary-color);
+            background-color: rgba(0, 85, 62, 0.05);
+        }
+        
+        .about-table td {
+            line-height: 1.8;
+        }
+        
+        .business-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .business-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .business-list li::before {
+            content: '・';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        .history-section {
+            margin-top: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .history-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .history-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .history-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+        
+        .history-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+        
+        .history-year {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .history-content {
+            color: var(--text-light);
+        }
+        
+        @media screen and (max-width: 767px) {
+            .page-title {
+                font-size: 28px;
+            }
+            
+            .about-table-container {
+                padding: 30px 20px;
+            }
+            
+            .about-table th,
+            .about-table td {
+                display: block;
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .about-table th {
+                background-color: transparent;
+                border-bottom: none;
+                padding-bottom: 5px;
+            }
+            
+            .about-table td {
+                padding-top: 5px;
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span class="header-tel">お電話でのお問い合わせ</span>
+                    <a href="tel:06-6942-3939" class="header-tel-number">06-6942-3939</a>
+                    <span class="header-hours">受付時間: 平日 9:00-18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <div class="logo">
+                        <a href="index.html">
+                            <h1>医療開業サポート</h1>
+                        </a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">トップ</a></li>
+                            <li class="nav-item"><a href="company.html" class="nav-link">会社紹介</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                            <li class="nav-item"><a href="access.html" class="nav-link">地図・アクセス</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link active">会社概要</a></li>
+                            <li class="nav-item"><a href="branches.html" class="nav-link">店舗情報</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2 class="page-title">会社概要</h2>
+            <div class="breadcrumb">
+                <a href="index.html">トップ</a> &gt; 会社概要
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-table-container">
+                    <table class="about-table">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社医療開業サポート</td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>2010年4月1日</td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>5,000万円</td>
+                        </tr>
+                        <tr>
+                            <th>代表取締役</th>
+                            <td>山田 太郎</td>
+                        </tr>
+                        <tr>
+                            <th>従業員数</th>
+                            <td>45名（2024年1月現在）</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>
+                                〒540-0012<br>
+                                大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td>06-6942-3939</td>
+                        </tr>
+                        <tr>
+                            <th>FAX番号</th>
+                            <td>06-6942-3940</td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>
+                                <ul class="business-list">
+                                    <li>医療機関の開業支援コンサルティング</li>
+                                    <li>医療機関の経営コンサルティング</li>
+                                    <li>医療機器・設備の選定支援</li>
+                                    <li>医療施設の設計・建築支援</li>
+                                    <li>医療機関向け人材紹介・派遣業</li>
+                                    <li>医療機関向けマーケティング支援</li>
+                                    <li>医療法人設立支援</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>取引銀行</th>
+                            <td>
+                                三菱UFJ銀行 大阪支店<br>
+                                三井住友銀行 本町支店<br>
+                                りそな銀行 大阪営業部
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>許認可</th>
+                            <td>
+                                有料職業紹介事業許可番号：27-ユ-300XXX<br>
+                                労働者派遣事業許可番号：派27-300XXX
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- 沿革 -->
+                <div class="history-section">
+                    <h3 class="history-title">沿革</h3>
+                    <div class="history-timeline">
+                        <div class="history-item">
+                            <div class="history-year">2010年4月</div>
+                            <div class="history-content">株式会社医療開業サポート設立</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2012年8月</div>
+                            <div class="history-content">東京支店開設</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2015年3月</div>
+                            <div class="history-content">開業支援実績100件達成</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2018年6月</div>
+                            <div class="history-content">名古屋支店開設</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2020年10月</div>
+                            <div class="history-content">開業支援実績300件達成</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2023年4月</div>
+                            <div class="history-content">福岡支店開設</div>
+                        </div>
+                        <div class="history-item">
+                            <div class="history-year">2024年1月</div>
+                            <div class="history-content">開業支援実績500件達成</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-title">医療開業サポート</h3>
+                    <p class="footer-address">
+                        〒540-0012<br>
+                        大阪府大阪市中央区谷町3-1-11 大晋第二ビル5F
+                    </p>
+                    <p class="footer-tel">TEL: 06-6942-3939</p>
+                    <p class="footer-fax">FAX: 06-6942-3940</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">サイトマップ</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">トップページ</a></li>
+                        <li><a href="company.html">会社紹介</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                        <li><a href="access.html">地図・アクセス</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="branches.html">店舗情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-nav-title">関連リンク</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 医療開業サポート All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
